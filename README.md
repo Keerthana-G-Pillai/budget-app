@@ -1,47 +1,104 @@
-# Budget Tracker
+# 💰 Budget Tracker
 
-A responsive budget management app built with **React.js** and **Material UI**. Track income and expenses, set category budget limits, and see your spending breakdown at a glance.
+A personal finance app to track income, expenses, and monthly budgets — built with React and Material UI.
 
-## Features
-- **Dashboard**: total income, total expenses, balance, spending-by-category pie chart, budget progress bars
-- **Transactions**: form to add income/expenses (description, amount, category, date), sortable history table with delete
-- **Budgets**: set a monthly spending limit per category, visual progress bar with over-budget warning
-- Fully responsive (mobile, tablet, desktop) via MUI's Grid/breakpoints
-- Data persists in the browser via `localStorage` — no backend needed
+---
 
-## Tech stack
-React, Material UI (MUI), Recharts (charts), uuid
+## ✨ Features
 
-## Setup
+- **Dashboard** — At-a-glance view of total income, expenses, and current balance with a pie chart showing spending by category
+- **Transactions** — Add income or expense entries with a description, amount, category, and date. Delete any entry at any time
+- **Budgets** — Set monthly spending limits per category and track progress with color-coded progress bars. Get alerted when you go over budget
+- **Persistent storage** — All data is saved in your browser's localStorage so nothing is lost on refresh
+
+---
+
+## 🖥️ App Overview
+
+### Dashboard
+Shows three summary cards (Income / Expenses / Balance), a spending breakdown pie chart, and current budget progress all in one place.
+
+### Transactions Tab
+- Toggle between **Expense** and **Income**
+- Fill in description, amount, category (for expenses), and date
+- View full transaction history sorted by date with colour-coded amounts
+- Delete individual transactions with the trash icon
+
+### Budgets Tab
+- Pick a category and set a monthly spending limit
+- Live progress bars show how much of each budget has been used
+- Red bar + warning when you exceed a budget limit
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 16+
+- npm
+
+### Installation
+
 ```bash
+# Clone the repo
+git clone https://github.com/Keerthana-G-Pillai/budget-app.git
+cd budget-app
+
+# Install dependencies
 npm install
+
+# Start the development server
 npm start
 ```
-App runs at http://localhost:3000
 
-## Build for production
+The app opens at [http://localhost:3000](http://localhost:3000).
+
+### Build for Production
+
 ```bash
 npm run build
 ```
 
-## Deploy
-Push to GitHub, then deploy free on Vercel or Netlify (no environment variables needed — everything runs client-side).
+---
 
-## Folder structure
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 18 | UI framework |
+| Material UI 5 | Component library & styling |
+| Recharts | Pie chart visualisation |
+| uuid | Unique transaction IDs |
+| localStorage | Client-side data persistence |
+
+---
+
+## 📁 Project Structure
+
 ```
 src/
-  components/
-    Navbar/
-    SummaryCards/
-    ExpenseChart/
-    TransactionForm/
-    TransactionList/
-    BudgetForm/
-    BudgetList/
-  context/
-    BudgetContext.js   # global state + localStorage persistence
-  utils/
-    helpers.js          # formatting, categories, colors
-  App.js
-  index.js
+├── components/
+│   ├── Navbar/          # Top navigation bar with tab switching
+│   ├── SummaryCards/    # Income / Expense / Balance cards
+│   ├── ExpenseChart/    # Pie chart of spending by category
+│   ├── TransactionForm/ # Form to add income or expense
+│   ├── TransactionList/ # Table of all transactions
+│   ├── BudgetForm/      # Form to set a category budget limit
+│   └── BudgetList/      # Progress bars for each budget
+├── context/
+│   └── BudgetContext.js # Global state (useReducer + localStorage)
+└── utils/
+    └── helpers.js       # Currency formatter, categories, colours
 ```
+
+---
+
+## 📋 Categories
+
+Food · Transport · Housing · Utilities · Entertainment · Health · Shopping · Education · Savings · Other
+
+---
+
+## 📝 License
+
+MIT
