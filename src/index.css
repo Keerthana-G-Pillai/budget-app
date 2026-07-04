@@ -5,4 +5,12 @@
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Give the main content breathing room above the mobile bottom nav */
+@media (max-width: 899px) {
+  main > div {
+    padding-bottom: 80px;
+  }
 }

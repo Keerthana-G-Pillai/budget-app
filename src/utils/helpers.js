@@ -17,4 +17,20 @@ export const categoryColors = {
   Education: '#14b8a6',
   Savings: '#6366f1',
   Other: '#94a3b8',
+  Income: '#22c55e',
+};
+
+// emoji icons per category for quick visual scans
+export const categoryIcons = {
+  Food: '🍔',
+  Transport: '🚗',
+  Housing: '🏠',
+  Utilities: '💡',
+  Entertainment: '🎬',
+  Health: '❤️',
+  Shopping: '🛍️',
+  Education: '📚',
+  Savings: '💰',
+  Other: '📌',
+  Income: '💵',
 };
